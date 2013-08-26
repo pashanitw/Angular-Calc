@@ -12,7 +12,8 @@ CALC.controller('calcController',function($scope,buttonModel){
     operators=['+','-','*','/','sqrt','1/x'],
     type1=[1,2,3,4,5,6,7,8,9,0,'.'],
     type2=['+','-','*','/','='],
-    type3=['sqrt','1/x'];
+    type3=['sqrt','1/x'],
+    isResultAppend=false;
     $scope.result='';
     $scope.buttonArray=[];
     $scope.init=function(){
@@ -31,6 +32,12 @@ CALC.controller('calcController',function($scope,buttonModel){
         return arr;
     }
    var numberClicked=function(value){
+       if(isResultAppend){
+           $scope.result='';
+           isResultAppend=false;
+          $scope.reset();
+
+       }
         $scope.result+=value;
     }
    var operatorClicked=function(k){
@@ -103,7 +110,7 @@ CALC.controller('calcController',function($scope,buttonModel){
                 break;
             }
         }
-
+        isResultAppend=true;
         operand1=$scope.result.substring(0,$scope.result.length);
         operand2=null;
     }
@@ -131,6 +138,12 @@ CALC.controller('calcController',function($scope,buttonModel){
           case 3: singleOperation(model.value);
                   break;
       }
-  }
+ }
+ $scope.reset=function(){
+ operand1=null;
+  operand2=null;
+  operator=null;
+  $scope.result='';
+ }
 
 })

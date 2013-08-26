@@ -14,6 +14,7 @@ CALC.factory('buttonModel',function(){
            self.value=value;
            self.type=type;
        }
+       self.big=false;
        return self;
    }
 })

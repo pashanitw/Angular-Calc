@@ -14,52 +14,30 @@
          <div class="row-fluid">
              <input class="span12" ng-model="result" id="result">
          </div>
-     <ul class="row-fluid">
-        <div class="span8" >
-         <div class="row-fluid">
-          <li ng-click="buttonClick(button)" ng-repeat="button in buttonArray | limitTo:3" class="btn span4"  >
+
+                 <div class="leftContainer">
+          <ul>
+          <li ng-click="buttonClick(button)" ng-repeat="button in buttonArray | limitTo:12" class="btn"  >
           {{button.value}}
           </li>
-        </div>
-         <div class="row-fluid">
-          <li  ng-click="buttonClick(button)" ng-repeat="button in buttonArray | startFrom:3 | limitTo:3" class="btn span4">
-           {{button.value}}
+           </ul>
+                </div>
+              <div class="rightContainer">
+                  <ul>
+          <li  ng-click="buttonClick(button)" ng-repeat="button in buttonArray | startFrom:12 " class="btn"  >
+            {{button.value}}
           </li>
-        </div>
-         <div class="row-fluid">
-          <li  ng-click="buttonClick(button)" ng-repeat="button in buttonArray | startFrom:6 | limitTo:3" class="btn span4" >
-              {{button.value}}
-          </li>
-        </div>
-           <div class="row-fluid">
-          <li  ng-click="buttonClick(button)" ng-repeat="button in buttonArray | startFrom:9 | limitTo:3" class="btn span4" >
-              {{button.value}}
-          </li>
-        </div>
-        </div>
-         <div class="span4">
-             <div class="row-fluid">
-          <li  ng-click="buttonClick(button)" ng-repeat="button in buttonArray | startFrom:12 | limitTo:2" class="btn span6" >
-              {{button.value}}
-          </li>
-             </div>
-           <div class="row-fluid">
-          <li  ng-click="buttonClick(button)" ng-repeat="button in buttonArray | startFrom:14 | limitTo:2" class="btn span6" >
-              {{button.value}}
-          </li>
-             </div>
-             <div class="row-fluid">
-          <li  ng-click="buttonClick(button)" ng-repeat="button in buttonArray | startFrom:16 | limitTo:2" class="btn span6" >
-              {{button.value}}
-          </li>
-             </div>
+           <li class="btn big" ng-click="reset()">Clear</li>      </ul>
+                
+                  </div>
+         <div class="clear"/>
          </div>
 
- </ul>
+
          </div>
  </div>
 
-
+<di
   <div>Angular seed app: v<span app-version></span></div>
 
   <!-- In production use:
