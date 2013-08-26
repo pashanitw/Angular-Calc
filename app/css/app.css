@@ -1,5 +1,7 @@
 /* app css stylesheet */
-
+body{
+padding-top: 10px;
+}
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -27,4 +29,15 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+.container{
+    width: 300px;
+}
+.container .li{
+    margin-top: 10px;
+    list-style: none;
+}
+#result{
+    margin-left: 25px;
+    margin-bottom: 6px;
 }
